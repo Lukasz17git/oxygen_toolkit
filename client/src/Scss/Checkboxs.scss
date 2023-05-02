@@ -1,0 +1,32 @@
+.checkbox {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    user-select: none;
+    line-height: 1.125em;
+    padding: 0.5rem 0.25rem;
+    cursor: pointer;
+    --input-color-border: var(--main-light-2);
+
+    &>input {
+        appearance: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 0.25rem;
+        border: solid 2px var(--input-color-border);
+    }
+
+    &>img {
+        position: absolute;
+        transform: translate(3px, -2px);
+    }
+    &>span{
+        position: absolute;
+        transform: translate(0.95rem, -0.1rem);
+        color: var(--red);
+        font-family: var(--text-bold);
+        font-size: 0.875rem;
+    }
+}

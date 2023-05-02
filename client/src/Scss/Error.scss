@@ -1,0 +1,50 @@
+.error {
+    &-container {
+        position: fixed;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--white);
+        border-radius: 1rem;
+        padding: 0.625rem;
+        width: calc(100% - 2rem);
+        max-width: 26rem;
+        border-top: solid 4px var(--red);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px;
+
+        @media (min-width: 768px) {
+            padding: 0.75rem;
+        }
+    }
+
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        border-radius: 0.75rem;
+        background-color: var(--red);
+        font-family: var(--text-black);
+        color: var(--white);
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+
+        &>h2 {
+            font-size: 1.875rem;
+        }
+    }
+
+    &-description {
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        overflow: hidden;
+
+        &>b {
+            font-size: 1.0625rem;
+            white-space: nowrap;
+        }
+    }
+}

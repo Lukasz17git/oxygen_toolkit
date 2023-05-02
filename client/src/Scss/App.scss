@@ -1,0 +1,188 @@
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    // colors
+    --main: #2e0039;
+    --main-light-2: #6c0086;
+    --white: rgba(254, 254, 254, 1);
+    --silver: rgba(227, 227, 227, 1);
+    --grey-light: rgb(136, 134, 141);
+    --grey: rgba(103, 103, 103, 1);
+    --dark: #1e0125;
+    --red: #ef4444;
+
+    // fonts    
+    --text-normal: 'Poppins medium';
+    --text-bold: 'Poppins semibold';
+    --text-black: 'Poppins extrabold';
+    font-family: var(--text-normal);
+
+
+}
+
+
+//// START OF APP SECTIONS ////
+#root {
+    max-width: 100%;
+    background-color: var(--white);
+}
+
+nav {
+    &~section {
+        max-width: 1300px;
+        padding: 50px 6vw;
+        width: 100%;
+        margin: auto;
+
+        >h2 {
+            text-align: center;
+        }
+    }
+
+    &+section {
+        padding-top: 3rem;
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+}
+
+nav>section {
+    max-width: 1350px;
+}
+
+footer>section {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+}
+
+//// END OF APP SECTIONS ////
+
+
+//// START OF TEXT SET UP ////
+h1 {
+    font-size: 3.25rem;
+    line-height: 1.1em;
+    font-family: var(--text-black);
+
+    >strong,
+    >b {
+        font-family: inherit;
+    }
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-family: var(--text-black);
+
+    >strong,
+    >b {
+        font-family: inherit;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: var(--text-bold);
+
+    >strong,
+    >b {
+        font-family: inherit;
+    }
+}
+
+strong {
+    font-family: var(--text-black);
+}
+
+b {
+    font-family: var(--text-bold);
+}
+
+p {
+    font-size: 0.9375rem;
+}
+
+small {
+    display: block;
+    font-size: 0.875rem;
+}
+
+q {
+    quotes: none;
+    display: block;
+    font-size: 0.75rem;
+}
+
+//// END OF TEXT SET UP ////
+
+
+//// START OF RESETS ////
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: inline-block;
+    max-width: none;
+    vertical-align: baseline;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+//// END OF RESETS ////
+
+
+
+//// START OF FONTS ////
+@font-face {
+    font-family: 'Poppins medium';
+    src: url('/Fonts/poppins-medium.woff2') format('woff2'),
+        url('/Fonts/poppins-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins semibold';
+    src: url('/Fonts/poppins-semibold.woff2') format('woff2'),
+        url('/Fonts/poppins-semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins extrabold';
+    src: url('/Fonts/poppins-extrabold.woff2') format('woff2'),
+        url('/Fonts/poppins-extrabold.woff') format('woff');
+}
+
+//// END OF FONTS ////

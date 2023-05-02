@@ -1,0 +1,57 @@
+.i {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-language{
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    &-cross {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &-heart {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+
+    &-flip {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    &-close-modal{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &-user{
+        width: 1.125rem;
+        height: 1.325rem;
+    }
+
+    &-error{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &-check{
+        width: 1em;
+        height: 1em;
+    }
+
+    &-bin{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &-add-palette{ //todo
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}

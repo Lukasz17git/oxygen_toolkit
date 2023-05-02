@@ -1,0 +1,112 @@
+.navbar {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 0 4px 1px #1e1e1e26;
+    border-bottom: 1px solid #1e1e1e26;
+    overflow: hidden;
+    padding: 0.25rem 0.5rem;
+
+    &-section,
+    &-section-on {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        max-height: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        transition: max-height 0.5s ease;
+        padding-bottom: 0.5rem;
+
+        @media (min-width: 768px) {
+            align-items: normal;
+            justify-content: end;
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+
+    &-section-on {
+        max-height: 11rem;
+    }
+
+    &-logo {
+        position: absolute;
+        top: 0rem;
+        left: 0.75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        height: 2.5rem;
+
+        &>img {
+            height: 1.3rem;
+        }
+    }
+
+    &-buttons {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 0.25rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+
+        @media (min-width: 768px) {
+            position: relative;
+            gap: 1rem;
+        }
+
+    }
+
+    &-burger,
+    &-burger-on {
+        margin: auto;
+        position: relative;
+        height: 2.5rem;
+        width: 2.5rem;
+        flex-shrink: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &-link {
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        height: 2.5rem;
+        padding: 0 1.25rem;
+        font-family: var(--text-bold);
+        user-select: none;
+        flex-shrink: 0;
+
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

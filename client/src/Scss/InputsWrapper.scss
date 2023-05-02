@@ -1,0 +1,20 @@
+.inputs-wrapper {
+    width: 100%;
+    margin: auto;
+    &>b {
+        font-size: 1.0625rem;
+
+        &+div {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            column-gap: 1.5rem;
+            row-gap: 1rem;
+            padding-top: 0.875rem;
+
+            &.inputs-wrapper-column {
+                flex-direction: column;
+            }
+        }
+    }
+}

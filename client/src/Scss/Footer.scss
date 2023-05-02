@@ -1,0 +1,41 @@
+.footer {
+    background-color: var(--main);
+    color: var(--white);
+    padding: 0.75rem;
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 0 2rem;
+        margin: 2rem auto;
+        max-width: 1000px;
+        height: 3rem;
+    }
+
+    &-copyright {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 0.875rem;
+    }
+
+    &-link {
+        height: 2rem;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        font-size: 0.875rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}

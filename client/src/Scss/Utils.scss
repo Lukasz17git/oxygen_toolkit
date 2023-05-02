@@ -1,0 +1,11 @@
+.tw {
+    white-space: nowrap;
+}
+
+.pointer {
+    user-select: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

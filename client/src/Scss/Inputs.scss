@@ -1,0 +1,99 @@
+@mixin translateSpan {
+    top: -0.5px;
+    transform: translateY(0%);
+    background-color: var(--input-color-background);
+    font-size: 0.75rem;
+}
+
+
+.input {
+    position: relative;
+    height: 2.75rem;
+    --input-color-text: var(--dark);
+    --input-color-border: var(--main);
+    --input-color-border-focus: var(--main-light-2);
+    --input-color-background: var(--white);
+    --input-color-invalid: var(--red);
+    --input-color-placeholder: var(--grey);
+
+    &>input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        font-family: inherit;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--input-color-border);
+        color: var(--input-color-text);
+        background-color: var(--input-color-background);
+
+        //placeholder
+        &::placeholder {
+            opacity: 0;
+            color: var(--input-color-placeholder);
+            transition: opacity 0.2s;
+        }
+
+        // on focus
+        &:focus {
+            border-color: var(--input-color-border-focus);
+
+            &::placeholder {
+                opacity: 0.6;
+            }
+
+            &+span {
+                @include translateSpan();
+            }
+        }
+
+        // on autofill
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px var(--input-color-background) inset;
+            -webkit-text-fill-color: var(--input-color-text);
+            caret-color: var(--input-color-text);
+
+            &+span {
+                @include translateSpan();
+            }
+        }
+
+
+        &+span {
+            position: absolute;
+            top: calc(50%);
+            transform: translateY(-50%);
+            left: 0.625rem;
+            padding: 0 2px;
+            line-height: 3px;
+            color: var(--input-color-placeholder);
+            transition: all 0.2s, color 0s;
+            pointer-events: none;
+        }
+
+        &:not([value=""])+span {
+            @include translateSpan();
+        }
+
+        &.input-required+span::before {
+            content: '*';
+            color: var(--input-color-invalid);
+            opacity: 0.7;
+            font-weight: bold;
+            padding-right: 1px;
+        }
+
+        &.input-invalid:not(:focus) {
+            border-color: var(--input-color-invalid);
+            color: var(--input-color-invalid) !important;
+
+            &:-webkit-autofill {
+                color: var(--input-color-invalid) !important;
+            }
+
+            &+span {
+                color: var(--input-color-invalid);
+            }
+        }
+    }
+}

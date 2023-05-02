@@ -1,0 +1,13 @@
+.field {
+    &-app {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.625rem;
+
+        &>b,
+        &>span {
+            flex-shrink: 0;
+        }
+
+    }
+}
