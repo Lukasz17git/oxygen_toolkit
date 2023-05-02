@@ -8,8 +8,8 @@
     "start": "nodemon server.js --ignore client"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "LUKASZ MARAJ",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
@@ -21,11 +21,6 @@
     "express": "^4.18.2",
     "express-static-gzip": "^2.1.7",
     "jsonwebtoken": "^9.0.0",
-    "maraj": "^1.1.2",
-    "mongoose": "^7.1.0",
-    "react-redux": "^8.0.5",
-    "redaxios": "^0.5.1",
-    "redux": "^4.2.1",
-    "redux-thunk": "^2.4.2"
+    "mongoose": "^7.1.0"
   }
 }
